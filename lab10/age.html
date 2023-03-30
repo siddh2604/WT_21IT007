@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="font-family: sans-serif; font-size: 4rem">Async Await API</h1>
+    <input
+      type="text"
+      id="username"
+      onblur="call()"
+      style="width: 200px; height: 30px; font-size: 2em"
+    />
+    <h1 id="head" style="font-family: sans-serif; font-size: 5rem"></h1>
+  </body>
+  <script>
+    const API_URL = "https://api.genderize.io/";
+    async function call() {
+      const usr = document.getElementById("username").value;
+      const str = `name=${usr}`;
+      const res = await fetch(`${API_URL}?${str}`);
+      const data = await res.json();
+      console.log(data);
+
+      document.getElementById("disp1").textContent =
+        "Probability = " + data.probability * 100 + "% " + data.gender;
+    }
+  </script>
+</html>
