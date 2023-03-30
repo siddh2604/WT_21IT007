@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Table Colour</title>
+    <style>
+        table,
+        td {
+            border: solid black;
+        }
+    </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+</head>
+
+<body>
+    <h2>Change Table Colour</h2>
+    <label for="colorInput">Colour Number:</label>
+    <input type="number" id="colorInput">
+    <button onclick="changeTableColor()">Change Table Colour</button>
+    <br><br>
+    <table id="myTable">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Raja</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <script src="Table_bgcolor.js"></script>
+</body>
+
+</html>
